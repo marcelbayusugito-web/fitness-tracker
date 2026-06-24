@@ -509,6 +509,126 @@ if st.session_state.get("sudah_hitung"):
     </div>
     """, unsafe_allow_html=True)
 
+# ============================================
+    # ARTIKEL TIPS NUTRISI & GYM
+    # ============================================
+    st.markdown('<div class="section-card"><div class="section-title">📰 Artikel Tips Nutrisi & Gym</div>', unsafe_allow_html=True)
+
+    artikel = [
+        {
+            "kategori": "🥗 Nutrisi",
+            "judul": "Cara Menghitung Kebutuhan Protein Harian",
+            "ringkasan": "Protein adalah makronutrien paling penting untuk membangun dan memperbaiki otot. Tanpa asupan protein yang cukup, latihan sekeras apapun tidak akan memberikan hasil maksimal.",
+            "isi": """
+            <b>Berapa banyak protein yang kamu butuhkan?</b><br><br>
+            Kebutuhan protein tergantung pada tujuan dan berat badan kamu:<br>
+            • <b>Cutting:</b> 2.0 – 2.4 gram per kg berat badan<br>
+            • <b>Bulking:</b> 1.6 – 2.0 gram per kg berat badan<br>
+            • <b>Maintain:</b> 1.4 – 1.8 gram per kg berat badan<br><br>
+            <b>Sumber protein terbaik:</b><br>
+            • Dada ayam (31g protein per 100g)<br>
+            • Telur (13g protein per 100g)<br>
+            • Ikan tuna (30g protein per 100g)<br>
+            • Tempe (19g protein per 100g)<br>
+            • Greek yogurt (10g protein per 100g)<br><br>
+            <b>Tips:</b> Sebarkan asupan protein ke 4-5 kali makan per hari untuk penyerapan optimal.
+            """
+        },
+        {
+            "kategori": "🏋️ Latihan",
+            "judul": "Progressive Overload — Kunci Otot Terus Berkembang",
+            "ringkasan": "Progressive overload adalah prinsip paling fundamental dalam gym. Tanpa ini, otot kamu tidak akan pernah berkembang meski latihan setiap hari.",
+            "isi": """
+            <b>Apa itu Progressive Overload?</b><br><br>
+            Progressive overload artinya secara bertahap meningkatkan beban atau volume latihan dari waktu ke waktu, sehingga otot terus mendapat stimulus baru untuk berkembang.<br><br>
+            <b>Cara menerapkannya:</b><br>
+            • Naikkan beban 2.5 – 5 kg setiap 1-2 minggu<br>
+            • Tambah 1-2 reps tiap sesi jika beban belum bisa dinaikkan<br>
+            • Tambah 1 set per latihan setiap bulan<br>
+            • Kurangi waktu istirahat antar set<br><br>
+            <b>Contoh:</b><br>
+            Minggu 1: Bench Press 50kg × 3 set × 10 reps<br>
+            Minggu 2: Bench Press 50kg × 3 set × 12 reps<br>
+            Minggu 3: Bench Press 52.5kg × 3 set × 10 reps<br><br>
+            <b>Ingat:</b> Catat setiap sesi latihan kamu agar bisa tracking progress dengan akurat.
+            """
+        },
+        {
+            "kategori": "😴 Recovery",
+            "judul": "Kenapa Istirahat Sama Pentingnya dengan Latihan",
+            "ringkasan": "Banyak orang berpikir semakin banyak latihan semakin bagus. Padahal otot tidak tumbuh saat latihan — otot tumbuh saat kamu istirahat.",
+            "isi": """
+            <b>Apa yang terjadi saat kamu tidur?</b><br><br>
+            Saat tidur, tubuh melepaskan Growth Hormone (GH) yang berfungsi memperbaiki serat otot yang rusak akibat latihan. Inilah mengapa tidur 7-9 jam sangat krusial.<br><br>
+            <b>Tanda-tanda overtrained:</b><br>
+            • Performa latihan menurun<br>
+            • Mudah lelah dan lesu<br>
+            • Sering sakit (imunitas turun)<br>
+            • Mood buruk dan sulit konsentrasi<br>
+            • Nyeri sendi berkepanjangan<br><br>
+            <b>Tips recovery terbaik:</b><br>
+            • Tidur 7-9 jam per malam — prioritas utama<br>
+            • Konsumsi protein sebelum tidur (kasein)<br>
+            • Lakukan active recovery (jalan, stretching, foam rolling)<br>
+            • Minimal 1-2 hari full rest per minggu<br><br>
+            <b>Ingat:</b> Rest day bukan hari malas — itu bagian dari program latihan kamu.
+            """
+        },
+        {
+            "kategori": "🥤 Hidrasi",
+            "judul": "Dampak Dehidrasi terhadap Performa Gym",
+            "ringkasan": "Kehilangan hanya 2% cairan tubuh sudah bisa menurunkan performa latihan hingga 20%. Hidrasi yang cukup adalah hal paling mudah tapi sering diabaikan.",
+            "isi": """
+            <b>Berapa banyak air yang dibutuhkan?</b><br><br>
+            • Minimal 2-3 liter per hari untuk orang aktif<br>
+            • Tambah 500ml untuk setiap 30 menit latihan intens<br>
+            • Cek warna urin — kuning pucat = terhidrasi baik<br><br>
+            <b>Waktu minum yang optimal:</b><br>
+            • Pagi hari: 1-2 gelas segera setelah bangun tidur<br>
+            • Sebelum latihan: 500ml, 30 menit sebelumnya<br>
+            • Selama latihan: 150-250ml setiap 15-20 menit<br>
+            • Setelah latihan: 500ml untuk mengganti cairan yang hilang<br><br>
+            <b>Tanda dehidrasi saat latihan:</b><br>
+            • Pusing dan kepala berat<br>
+            • Kram otot tiba-tiba<br>
+            • Detak jantung lebih cepat dari biasanya<br>
+            • Mulut dan tenggorokan kering<br><br>
+            <b>Tips:</b> Bawa botol minum 1 liter ke gym dan targetkan habis 2x selama sesi latihan.
+            """
+        },
+        {
+            "kategori": "🧠 Mental",
+            "judul": "Mind-Muscle Connection — Latihan Lebih Efektif dengan Fokus",
+            "ringkasan": "Penelitian menunjukkan bahwa fokus mental pada otot yang dilatih bisa meningkatkan aktivasi otot hingga 60% dibanding latihan tanpa fokus.",
+            "isi": """
+            <b>Apa itu Mind-Muscle Connection?</b><br><br>
+            Mind-muscle connection adalah kemampuan untuk secara sadar merasakan dan mengontrol otot yang sedang kamu latih. Ini bukan soal beban berat — tapi soal kualitas kontraksi otot.<br><br>
+            <b>Cara melatihnya:</b><br>
+            • Turunkan beban 20-30% dan fokus pada sensasi otot<br>
+            • Gerakkan secara perlahan — terutama fase negatif (turun/balik)<br>
+            • Squeeze atau kontraksikan otot di titik puncak gerakan<br>
+            • Hindari momentum — jangan ayun beban<br><br>
+            <b>Contoh — Bicep Curl:</b><br>
+            ❌ Salah: Angkat beban cepat menggunakan momentum bahu<br>
+            ✅ Benar: Angkat perlahan, rasakan bisep berkontraksi, squeeze di atas, turun 3 detik<br><br>
+            <b>Tips:</b> Letakkan tangan bebas di otot yang dilatih untuk membantu merasakan kontraksinya.
+            """
+        },
+    ]
+
+    # Tampilkan artikel dengan expander
+    for art in artikel:
+        with st.expander(f"{art['kategori']}  |  {art['judul']}"):
+            st.markdown(f"""
+            <div style="background:#f8f9ff; border-radius:12px; padding:1rem 1.2rem; margin-bottom:1rem; border-left:4px solid #f7971e;">
+                <p style="color:#555; font-size:0.88rem; margin:0; font-style:italic;">{art['ringkasan']}</p>
+            </div>
+            <div style="font-size:0.88rem; color:#333; line-height:1.8;">
+                {art['isi']}
+            </div>
+            """, unsafe_allow_html=True)
+
+    st.markdown('</div>', unsafe_allow_html=True)
 # FOOTER
 st.markdown("""
 <div class="footer">
